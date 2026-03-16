@@ -1,59 +1,92 @@
 # Manus Project OS
 
+
 Structured operating system for building large software projects with Manus.
 
-Manus Project OS provides governance, workflow structure, and repeatable
-delivery templates so AI-assisted engineering stays organized as projects grow.
+Manus Project OS provides governance, workflow structure, and repeatable delivery templates so AI assisted engineering stays organized as projects grow.
 
-This framework is designed for:
+This framework works well for:
 
-• B2B SaaS platforms
-• internal operations systems
-• AI-enabled applications
-• compliance and workflow platforms
+- B2B SaaS platforms
+- internal operations systems
+- AI enabled applications
+- compliance and workflow platforms
 
-## What this repo does
+---
 
-Manus Project OS gives you a reusable structure for:
+# What this repository provides
 
-- project-level operating rules
-- role-based Manus skills
-- fixed delivery templates
-- QA and release gates
+Manus Project OS gives teams a reusable structure for disciplined AI assisted software development.
+
+The framework includes:
+
+- project operating rules
+- reusable Manus skills
+- structured planning templates
+- QA validation workflows
+- release discipline
 - decision and risk tracking
-- repeatable output formats for larger builds
 
-Use it for any substantial app or platform project:
+The objective is simple.
 
-- B2B SaaS
-- internal ops software
-- workflow systems
-- AI-enabled applications
-- compliance platforms
-- multi-phase product builds
+Large projects should behave like engineered systems, not prompt experiments.
 
-## Design principles
+---
 
-1. One source of truth
-   - Product, architecture, testing, and release rules live in version control.
+# Development workflow
 
-2. Fixed outputs
-   - Every major Manus workflow produces the same categories of output.
+Every meaningful change should move through the same pipeline.
 
-3. Stage gates
-   - Work does not move forward because code exists. Work moves forward because evidence exists.
+```
+Feature Request
+      ↓
+Change Plan
+      ↓
+Task Brief
+      ↓
+Implementation
+      ↓
+QA Report
+      ↓
+Release Packet
+```
 
-4. Reusable skills
-   - Skills are modular and project-agnostic.
+Each step produces documentation stored in the repository.
 
-5. Project context in layers
-   - Permanent operating context, project context, and task context stay separate.
+---
 
-## Recommended repo structure
+# Design principles
+
+## One source of truth
+
+Product, architecture, testing, and release rules live in version control.
+
+## Evidence driven progress
+
+Work advances when validation exists, not when code compiles.
+
+## Planning before implementation
+
+Major changes require a documented change plan before development begins.
+
+## Repeatable delivery
+
+Every feature follows the same lifecycle from idea to release.
+
+## Layered context
+
+Permanent context, project context, and task context remain separated.
+
+---
+
+# Recommended repository structure
 
 ```text
 manus-project-os/
 ├── README.md
+├── PROJECT_START_HERE.md
+├── MANUS_CONTEXT.md
+├── MANUS_SESSION_START.md
 ├── docs/
 │   ├── charter/
 │   │   └── PROJECT_CHARTER.md
@@ -112,126 +145,122 @@ manus-project-os/
         └── repo-health.yml
 ```
 
-## How to use this
+---
 
-### 1. Fork or copy this repo
+# How to use this framework
 
-Place it in its own repo, or copy the structure into the root of a product repo.
+## 1. Copy or fork the repository
 
-### 2. Fill out the core docs first
+Create a new repository for your product and copy this structure.
 
-Before asking Manus to build features, complete:
+## 2. Complete the core documentation
 
-- `docs/charter/PROJECT_CHARTER.md`
-- `docs/product/PRODUCT_REQUIREMENTS.md`
-- `docs/architecture/TECHNICAL_ARCHITECTURE.md`
-- `docs/standards/CODING_STANDARDS.md`
-- `docs/testing/TEST_POLICY.md`
-- `docs/release/RELEASE_PROCESS.md`
+Before development begins complete the core documents:
 
-### 3. Load skills into Manus
+- docs/charter/PROJECT\_CHARTER.md
+- docs/product/PRODUCT\_REQUIREMENTS.md
+- docs/architecture/TECHNICAL\_ARCHITECTURE.md
+- docs/standards/CODING\_STANDARDS.md
+- docs/testing/TEST\_POLICY.md
+- docs/release/RELEASE\_PROCESS.md
 
-Each folder under `skills/` contains a reusable operating skill. Adapt the language and workflows to your preferred stack.
+These files define how the project operates.
 
-### 4. Run work in this order
+## 3. Configure Manus skills
 
-For most feature work:
+Each directory inside `skills/` defines a reusable development role. Adapt these to your stack and workflows.
 
-1. Product Planner
-2. Technical Planner
-3. Scope Reviewer
-4. Feature Builder
-5. Code Reviewer
-6. Test Designer
-7. QA Runner
-8. Security Reviewer
-9. Release Manager
-10. Retro Writer
+## 4. Execute feature work
 
-### 5. Require evidence
+Follow the development workflow using the templates in `/templates`.
 
-Every feature should leave behind:
+Feature request → change plan → task brief → implementation → QA report → release packet.
 
-- implementation plan
-- changed files summary
-- tests added
-- test results
-- risk notes
-- rollback notes
-- release note draft
+---
 
-## Core operating rules
+# Core operating rules
 
-### Context model
+## Context layers
 
-Use three layers of context:
+Three context layers guide development.
 
-- Permanent context
-  - business model
-  - product purpose
-  - architectural rules
-  - coding standards
-  - naming rules
+Permanent context
 
-- Project context
-  - roadmap
-  - milestones
-  - data model
-  - infra details
-  - environment notes
+- business model
+- product purpose
+- architectural rules
+- coding standards
+- naming rules
 
-- Task context
-  - specific feature or bug
-  - acceptance criteria
-  - constraints
-  - impacted files
-  - target environment
+Project context
 
-### Stage gates
+- roadmap
+- milestones
+- data model
+- infrastructure
+- environment configuration
 
-#### Gate 1, Scope
-- Requirements are clear.
-- Dependencies are identified.
-- Risks are logged.
+Task context
 
-#### Gate 2, Build
-- Code is complete.
-- Lint passes.
-- Local tests pass.
+- specific feature or bug
+- acceptance criteria
+- constraints
+- impacted components
 
-#### Gate 3, QA
-- Acceptance criteria verified.
-- Regression smoke completed.
-- Auth and permissions checked.
+---
 
-#### Gate 4, Release
-- Release notes drafted.
-- Rollback path defined.
-- Migration steps documented.
+# Stage gates
 
-#### Gate 5, Post-ship
-- Retro completed.
-- Defects logged.
-- Follow-up tasks created.
+Development moves through validation gates.
 
-## What to customize per project
+## Gate 1 Scope
 
-You should customize:
+- requirements defined
+- dependencies identified
+- risks recorded
 
-- architecture decisions
-- tech stack rules
-- branch naming rules
-- deployment method
+## Gate 2 Build
+
+- code implemented
+- tests written
+- local validation passes
+
+## Gate 3 QA
+
+- acceptance criteria verified
+- regression checks completed
+- authentication and permissions validated
+
+## Gate 4 Release
+
+- release notes written
+- rollback path defined
+- deployment steps documented
+
+## Gate 5 Post release
+
+- retrospective recorded
+- issues logged
+- follow up work identified
+
+---
+
+# Customizing for a project
+
+Each project should adjust:
+
+- architecture documentation
+- technology stack rules
+- deployment workflow
 - test commands
-- definition of done
-- release checklist
-- environment URLs
-- staging credentials process
-- domain-specific security controls
+- environment configuration
+- security policies
 
-## Suggested add-ons
+---
 
-As your project matures, add:
+# Suggested improvements as projects mature
+
+As the system grows consider adding:
 
 - GitHub issue templates
 - pull request templates
@@ -239,17 +268,35 @@ As your project matures, add:
 - migration playbooks
 - environment runbooks
 - seeded test data scripts
-- browser test scripts
+- browser testing automation
 - CI evidence collection
 
-## Fast start
+---
 
-1. Complete the templates in `docs/`.
-2. Rename or extend the skills in `skills/`.
-3. Add project-specific examples to each skill.
-4. Commit the repo.
-5. Point Manus at this repository and treat it as your project operating system.
+# Quick start
 
-## License
+1. Complete the documents in `docs/`.
+2. Configure skills in `skills/`.
+3. Use templates in `templates/` to plan and execute work.
+4. Commit the repository.
+5. Treat the repository as the operating system for the project.
 
-MIT is a good default for internal reuse. Adjust to fit your goals.
+---
+
+# License
+
+MIT License with attribution.
+
+Copyright (c) 2026 Phillip Williams, Bafmin LLC
+
+Permission is granted, free of charge, to any person obtaining a copy of this software and associated documentation files to deal in the Software without restriction. This includes the rights to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the Software.
+
+Conditions
+
+1. The copyright notice and this permission notice must be included in all copies or substantial portions of the Software.
+
+2. Public redistributions or derivative frameworks must include attribution in documentation or repository description using the following credit:
+
+Manus Project OS created by Phillip Williams.
+
+The software is provided "as is", without warranty of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, and noninfringement.
