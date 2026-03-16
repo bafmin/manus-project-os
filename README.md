@@ -1,8 +1,16 @@
 # Manus Project OS
 
-A GitHub-ready operating system for larger Manus software projects.
+Structured operating system for building large software projects with Manus.
 
-This framework is inspired by the specialist workflow pattern used in gstack, but rebuilt for Manus-first delivery. It is designed for projects where you need stronger planning, tighter testing, clearer release control, and less context drift.
+Manus Project OS provides governance, workflow structure, and repeatable
+delivery templates so AI-assisted engineering stays organized as projects grow.
+
+This framework is designed for:
+
+• B2B SaaS platforms
+• internal operations systems
+• AI-enabled applications
+• compliance and workflow platforms
 
 ## What this repo does
 
