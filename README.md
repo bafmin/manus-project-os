@@ -1,5 +1,5 @@
 # Manus Project OS
-
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Structured operating system for building large software projects with Manus.
 
